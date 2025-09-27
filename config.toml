@@ -1,0 +1,34 @@
+# Agent Quant System 配置文件
+
+[agent_service]
+url = "http://localhost:8000"
+
+[api_keys]
+openai_key = "YOUR_OPENAI_API_KEY"  # 建议通过环境变量加载
+
+[accounts]
+[accounts.my_stock_broker]
+api_key = "STOCK_API_KEY"
+api_secret = "STOCK_API_SECRET"
+broker_type = "stock"
+
+[accounts.my_crypto_exchange]
+api_key = "CRYPTO_API_KEY"
+api_secret = "CRYPTO_API_SECRET"
+broker_type = "crypto"
+
+[database]
+host = "localhost"
+port = 5432
+username = "quant_user"
+password = "quant_password"
+database_name = "quant_db"
+
+[logging]
+level = "info"
+file = "logs/quant_system.log"
+
+[backtest]
+initial_capital = 100000.0
+commission_rate = 0.001
+slippage_rate = 0.0005
